@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Griffes</title>
+    <title>One-shot games</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../assets/css/main.css" />
@@ -13,15 +13,44 @@
 
 <body>
 
+<div class="row uniform">
 
+<div class="4u 12u$(small)">
+                        <input type="radio" id="demo-priority-low" name="demo-priority" 
+onclick="iframe_a.location.href='../class2/README.html'" checked>
+                        <label for="demo-priority-low">
+                        README.md
+                        </label>
+
+                      </div>
+
+                      <div class="4u 12u$(small)">
+                        <input type="radio" id="demo-priority-normal" name="demo-priority"
+onclick="iframe_a.location.href='https://render.githubusercontent.com/view/ipynb?commit=672226bf4cebf54942735673bedbba510aba1020&amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f706f6c6f6d7363612f6f6e652d73686f742d67616d65732f363732323236626634636562663534393432373335363733626564626261353130616261313032302f6d6f64656c7367616d656e65742e6970796e62&amp;nwo=polomsca%2Fone-shot-games&amp;path=modelsgamenet.ipynb&amp;repository_id=80489601#708092bf-0c11-49a9-85b9-5b5a2ce0dd04'"
+                        >
+                        <label for="demo-priority-normal">
+                        modelgamenet.ipynb
+                        </label>
+                      </div>
+
+                      <div class="4u 12u$(small)">
+                        <input type="radio" id="demo-priority-high" name="demo-priority"
+onclick="location.href='https://github.com/polomsca/one-shot-games'"
+                        >
+                        <label for="demo-priority-high">
+                        Go to GitHub
+                        </label>
+                      </div>
+
+</div>
 
 <div class="stockIframe ">
-    <iframe src=griffes-scherzo.html onload="autoResize(this)" height="100%" width="100%"></iframe> 
+    <iframe src='../class2/README.html' name="iframe_a" onload="autoResize(this)" height="90%" width="100%"></iframe> 
 </div>
 
 <style>
    html,body { height: 100% }
-   .stockIframe iframe {   position:absolute; right:0px; top:0px}
+   .stockIframe iframe {   position:absolute; right:0px; top:10%}
    
 </style>
 
@@ -32,11 +61,6 @@
      (i).height=iframeHeight+20;
    } 
 </script>
-
-<audio controls>
- <source src=griffes-scherzo.mp3
-         type='audio/mp3'>
-         </audio>
 
 <!-- Header -->
           <header id="header">
