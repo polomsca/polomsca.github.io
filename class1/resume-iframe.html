@@ -6,7 +6,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../assets/css/main.css" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 </head>
 
 <!-- Wrapper -->
@@ -14,15 +13,23 @@
 
 <body>
 
-<iframe height="950" width="100%" scrolling="no" src="resume.html"></iframe>
+<div class="stockIframe ">
+    <iframe src=resume.html onload="autoResize(this)" height="100%" width="100%"></iframe> 
+</div>
 
 <style>
- iframe {
-        width: 10px;
-        min-width: 100%;
-        *width: 100%;
-    }
+   html,body { height: 100% }
+   .stockIframe iframe {   position:absolute; right:0px; top:0px}
+   
 </style>
+
+<script>
+   function autoResize(i) {
+     var iframeHeight=
+     (i).contentWindow.document.body.scrollHeight;
+     (i).height=iframeHeight+20;
+   } 
+</script>
 
 <!-- Header -->
           <header id="header">
@@ -60,11 +67,11 @@
               4. One-shot games
               </a></li>
 
-              <li><a href="https://github.com/polomsca/finite-rpt-games" style="color:#7ecaf6">
+              <li><a href="../class2/repeated-games-iframe.html" style="color:#7ecaf6">
               5. Repeated games
               </a></li>
 
-              <li><a href="https://github.com/polomsca/stl-rstrnt-ratings" style="color:#7ecaf6">
+              <li><a href="../class2/restaurant-ratings-iframe.html" style="color:#7ecaf6">
               6. Restaurant ratings
               </a></li>
 
