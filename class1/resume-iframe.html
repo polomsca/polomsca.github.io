@@ -18,12 +18,18 @@
 </div>
 
 <style>
-   html,body,header { height: 100% }
+   html,body { height: 100% }
    .stockIframe iframe {   position:absolute; right:0px; top:0px}
    
 </style>
 
-
+<script>
+   function autoResize(i) {
+     var iframeHeight=
+     (i).contentWindow.document.body.scrollHeight;
+     (i).height=iframeHeight+20;
+   } 
+</script>
 
 <!-- Header -->
           <header id="header">
@@ -83,13 +89,7 @@
             </ul>
           </nav>
 
-<script>
-   function autoResize(i) {
-     var iframeHeight=
-     (i).contentWindow.document.body.scrollHeight;
-     (i).height=iframeHeight+20;
-   } 
-</script>
+
 
 <!-- Scripts -->
       <script src="../assets/js/jquery.min.js"></script>
