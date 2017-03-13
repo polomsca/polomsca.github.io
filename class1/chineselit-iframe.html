@@ -5,34 +5,82 @@
 		<meta charset="utf-8" />
 		
 		<link rel="stylesheet" href="../assets/css/main.css" />
+
+		<style>
+body {
+    
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
 </head>
 
 <!-- Wrapper -->
-			<div id="wrapper">
+<div id="wrapper">
 
 <body>
 
-<p style='text-align:left; width: 50%;'>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="guanhanqing-snow.html" target="iframe_a" style="color:white;">Snow in Midsummer</a>
+  <a href="liyu-silentoperas.html" target="iframe_a" style="color:white">An Actress Scorns Wealth and Honor to Preserve Her Chasity</a>
+</div>
 
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
 
-<input type="radio" id="demo-priority-low" name="demo-priority" checked 
-onclick="iframe_a.location.href='guanhanqing-snow.html'"
-												>
-												<label for="demo-priority-low">
-												Snow in Midsummer. By Guan Hanqing.
-												</label>
-
-												<input type="radio" id="demo-priority-normal" name="demo-priority"
-onclick="iframe_a.location.href='liyu-silentoperas.html'"
-												>
-												<label for="demo-priority-normal">
-												An Actress Scorns Wealth and Honor to Preserve Her Chasity. By Li Yu.
-												</label>
-
-</p>
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
 
 <div class="stockIframe2 ">
-<iframe height="85%" width="50%" src='guanhanqing-snow.html' name="iframe_a"></iframe>
+<iframe height="99%" width="50%" src='guanhanqing-snow.html' name="iframe_a"></iframe>
 </div>
 
 <div class="stockIframe ">
@@ -42,7 +90,7 @@ onclick="iframe_a.location.href='liyu-silentoperas.html'"
 <style>
    html,body { height: 100% }
    .stockIframe iframe {   position:absolute; right:0px; top:0px}
-   .stockIframe2 iframe {   position:absolute; left:0px; top:15%}
+   .stockIframe2 iframe {   position:absolute; left:0px; top:0%;}
 </style>
 
 <script>
@@ -53,22 +101,27 @@ onclick="iframe_a.location.href='liyu-silentoperas.html'"
    } 
 </script>
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
-<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
+<div id="main">
 
-						</div>
-					</header>
+  <span style="font-size:2em;cursor:pointer;position:fixed; left:0.80em;top:0.80em;z-index=2"  onclick="openNav()">&#9432; </span>
+</div>
 
-				<!-- Menu -->
+<!-- Header -->
+	<header id="header">
+		<div class="inner">
+	<!-- Nav -->
+				<nav>
+					<ul>
+						<li><a href="#menu">Menu</a></li>
+					</ul>
+				</nav>
+		</div>
+	</header>
+				
+				<!-- Menu -->	
 					<nav id="menu">
-						<h2>Menu</h2>
+						
+						
 						<ul>
 							<li><a href="../index.html">Charlie's homepage</a></li>
 							
@@ -114,7 +167,7 @@ onclick="iframe_a.location.href='liyu-silentoperas.html'"
 			<script src="../assets/js/jquery.min.js"></script>
 			<script src="../assets/js/skel.min.js"></script>
 			<script src="../assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+
 			<script src="../assets/js/main.js"></script>
 
 </body>

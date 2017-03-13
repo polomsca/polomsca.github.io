@@ -1,57 +1,93 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>One-shot games</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../assets/css/main.css" />
+		<title>One-shot games</title>
+		<meta charset="utf-8" />
+		
+		<link rel="stylesheet" href="../assets/css/main.css" />
+
+		<style>
+body {
+    
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
 </head>
 
 <!-- Wrapper -->
-      <div id="wrapper">
+<div id="wrapper">
 
 <body>
 
-<div class="row uniform">
-
-<div class="4u 12u$(small)">
-                        <input type="radio" id="demo-priority-low" name="demo-priority" 
-onclick="iframe_a.location.href='../class2/one-shot-games-README.html'" >
-                        <label for="demo-priority-low">
-                        README.md
-                        </label>
-
-                      </div>
-
-                      <div class="4u 12u$(small)">
-                        <input type="radio" id="demo-priority-normal" name="demo-priority"
-onclick="iframe_a.location.href='https://render.githubusercontent.com/view/ipynb?commit=672226bf4cebf54942735673bedbba510aba1020&amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f706f6c6f6d7363612f6f6e652d73686f742d67616d65732f363732323236626634636562663534393432373335363733626564626261353130616261313032302f6d6f64656c7367616d656e65742e6970796e62&amp;nwo=polomsca%2Fone-shot-games&amp;path=modelsgamenet.ipynb&amp;repository_id=80489601#708092bf-0c11-49a9-85b9-5b5a2ce0dd04'" checked
-                        >
-                        <label for="demo-priority-normal">
-                        modelgamenet.ipynb
-                        </label>
-                      </div>
-
-                      <div class="4u 12u$(small)">
-                        <input type="radio" id="demo-priority-high" name="demo-priority"
-onclick="location.href='https://github.com/polomsca/one-shot-games'"
-                        >
-                        <label for="demo-priority-high">
-                        Go to GitHub
-                        </label>
-                      </div>
-
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="../class2/one-shot-games-README.html" target="iframe_a" style="color:white;">README.md</a>
+  <a href="https://render.githubusercontent.com/view/ipynb?commit=672226bf4cebf54942735673bedbba510aba1020&amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f706f6c6f6d7363612f6f6e652d73686f742d67616d65732f363732323236626634636562663534393432373335363733626564626261353130616261313032302f6d6f64656c7367616d656e65742e6970796e62&amp;nwo=polomsca%2Fone-shot-games&amp;path=modelsgamenet.ipynb&amp;repository_id=80489601#708092bf-0c11-49a9-85b9-5b5a2ce0dd04" target="iframe_a" style="color:white">gamenet.ipynb</a>
+  <a href="https://github.com/polomsca/one-shot-games"  style="color:white;">Go to GitHub</a>
 </div>
 
-<div class="stockIframe ">
-    <iframe src='https://render.githubusercontent.com/view/ipynb?commit=672226bf4cebf54942735673bedbba510aba1020&amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f706f6c6f6d7363612f6f6e652d73686f742d67616d65732f363732323236626634636562663534393432373335363733626564626261353130616261313032302f6d6f64656c7367616d656e65742e6970796e62&amp;nwo=polomsca%2Fone-shot-games&amp;path=modelsgamenet.ipynb&amp;repository_id=80489601#708092bf-0c11-49a9-85b9-5b5a2ce0dd04' name="iframe_a" onload="autoResize(this)" height="90%" width="100%"></iframe> 
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+<div class="stockIframe2 ">
+<iframe height="99%" width="100%" src='https://render.githubusercontent.com/view/ipynb?commit=672226bf4cebf54942735673bedbba510aba1020&amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f706f6c6f6d7363612f6f6e652d73686f742d67616d65732f363732323236626634636562663534393432373335363733626564626261353130616261313032302f6d6f64656c7367616d656e65742e6970796e62&amp;nwo=polomsca%2Fone-shot-games&amp;path=modelsgamenet.ipynb&amp;repository_id=80489601#708092bf-0c11-49a9-85b9-5b5a2ce0dd04' name="iframe_a"></iframe>
 </div>
 
 <style>
    html,body { height: 100% }
-   .stockIframe iframe {   position:absolute; right:0px; top:10%}
-   
+   .stockIframe iframe {   position:absolute; right:0px; top:0px}
+   .stockIframe2 iframe {   position:absolute; left:0px; top:0%;}
 </style>
 
 <script>
@@ -62,69 +98,74 @@ onclick="location.href='https://github.com/polomsca/one-shot-games'"
    } 
 </script>
 
+<div id="main">
+
+  <span style="font-size:2em;cursor:pointer;position:fixed; left:0.80em;top:0.80em;z-index=2"  onclick="openNav()">&#9432; </span>
+</div>
+
 <!-- Header -->
-          <header id="header">
-            <div class="inner">
-<!-- Nav -->
-                <nav>
-                  <ul>
-                    <li><a href="#menu">Menu</a></li>
-                  </ul>
-                </nav>
+	<header id="header">
+		<div class="inner">
+	<!-- Nav -->
+				<nav>
+					<ul>
+						<li><a href="#menu">Menu</a></li>
+					</ul>
+				</nav>
+		</div>
+	</header>
+				
+				<!-- Menu -->	
+					<nav id="menu">
+						
+						
+						<ul>
+							<li><a href="../index.html">Charlie's homepage</a></li>
+							
+							<li><a href="../class1/resume.html" style="color:#f2849e">
+							1. Resume
+							</a></li>
 
-            </div>
-          </header>
+							<li><a href="../class1/chineselit-iframe.html" style="color:#f2849e">
+							2. Chinese literature
+							</a></li>
 
-        <!-- Menu -->
-          <nav id="menu">
-            <h2>Menu</h2>
-            <ul>
-              <li><a href="../index.html">Charlie's homepage</a></li>
-              
-              <li><a href="../class1/resume.html" style="color:#f2849e">
-              1. Resume
-              </a></li>
+							<li><a href="../class1/exposition-iframe.html" style="color:#f2849e">
+							3. Exposition
+							</a></li>
 
-              <li><a href="../class1/chineselit-iframe.html" style="color:#f2849e">
-              2. Chinese literature
-              </a></li>
+							<li><a href="../class2/one-shot-games-iframe.html" style="color:#7ecaf6">
+							4. One-shot games
+							</a></li>
 
-              <li><a href="../class1/exposition-iframe.html" style="color:#f2849e">
-              3. Exposition
-              </a></li>
+							<li><a href="../class2/repeated-games-iframe.html" style="color:#7ecaf6">
+							5. Repeated games
+							</a></li>
 
-              <li><a href="../class2/one-shot-games-iframe.html" style="color:#7ecaf6">
-              4. One-shot games
-              </a></li>
+							<li><a href="../class2/restaurant-ratings-iframe.html" style="color:#7ecaf6">
+							6. Restaurant ratings
+							</a></li>
 
-              <li><a href="../class2/repeated-games-iframe.html" style="color:#7ecaf6">
-              5. Repeated games
-              </a></li>
+							<li><a href="../class3/debussy-toccata-iframe.html" style="color:#7bd0c1">
+							7. Debussy
+							</a></li>
 
-              <li><a href="../class2/restaurant-ratings-iframe.html" style="color:#7ecaf6">
-              6. Restaurant ratings
-              </a></li>
+							<li><a href="../class3/brahms-capriccio-iframe.html" style="color:#7bd0c1">
+							8. Brahms
+							</a></li>
 
-              <li><a href="../class3/debussy-toccata-iframe.html" style="color:#7bd0c1">
-              7. Debussy
-              </a></li>
-
-              <li><a href="../class3/brahms-capriccio-iframe.html" style="color:#7bd0c1">
-              8. Brahms
-              </a></li>
-
-              <li><a href="../class3/griffes-scherzo-iframe.html" style="color:#7bd0c1">
-              9. Griffes
-              </a></li>
-            </ul>
-          </nav>
+							<li><a href="../class3/griffes-scherzo-iframe.html" style="color:#7bd0c1">
+							9. Griffes
+							</a></li>
+						</ul>
+					</nav>
 
 <!-- Scripts -->
-      <script src="../assets/js/jquery.min.js"></script>
-      <script src="../assets/js/skel.min.js"></script>
-      <script src="../assets/js/util.js"></script>
-      <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-      <script src="../assets/js/main.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/skel.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+
+			<script src="../assets/js/main.js"></script>
 
 </body>
 </html>
