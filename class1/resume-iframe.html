@@ -7,7 +7,16 @@
     
     <link rel="stylesheet" href="../assets/css/main.css" />
 </head>
-
+<!-- Corresponding code in the "parent" page -->
+<script src="../assets/js/jquery.js"></script>
+<script src="../assets/js/jquery.responsiveiframe.js"></script>
+<script>
+  ;(function($){          
+      $(function(){
+        $('#myIframeID').responsiveIframe({ xdomain: '*'});
+      });        
+  })(jQuery);
+</script>
 <!-- Wrapper -->
       <div id="wrapper">
 
