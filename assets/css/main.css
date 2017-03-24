@@ -1723,7 +1723,7 @@
 		font-weight: 900;
 		line-height: 1.5;
 		margin: 0 0 2em 0;
-		text-transform: uppercase;
+		/*text-transform: uppercase;*/
 		letter-spacing: 0.35em;
 	}
 
@@ -2482,8 +2482,9 @@
 		text-align: center;
 		text-decoration: none;
 		text-overflow: ellipsis;
-		text-transform: uppercase;
+		/*text-transform: uppercase;*/
 		white-space: nowrap;
+		font-family: 'Homemade Apple', cursive;
 	}
 
 		input[type="submit"].icon:before,
@@ -2754,10 +2755,10 @@
 			}
 
 			body:not(.is-touch) .tiles article:hover > .image {
-				-moz-transform: scale(1.1);
-				-webkit-transform: scale(1.1);
-				-ms-transform: scale(1.1);
-				transform: scale(1.1);
+				-moz-transform: scale(1.0);
+				-webkit-transform: scale(1.0);
+				-ms-transform: scale(1.0);
+				transform: scale(1.0);
 			}
 
 				body:not(.is-touch) .tiles article:hover > .image:before {
@@ -2802,8 +2803,70 @@
 					margin: 1.25em 0 0 1.25em;
 				}
 
+				.tiles article > a h2 {
+					margin: 0;
+					font-size: 1.3em;
+				}
+
 		}
 
+		@media screen and (max-width: 980px) {
+
+			.tiles {
+				margin: -1.25em 0 0 -1.25em;
+			}
+
+				.tiles article {
+					width: calc(33.33333% - 1.25em);
+					margin: 1.25em 0 0 1.25em;
+				}
+
+				.tiles article > a h2 {
+					margin: 0;
+					font-size: 1.1em;
+				}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			.tiles {
+				margin: -1.25em 0 0 -1.25em;
+			}
+
+				.tiles article {
+					width: calc(33.33333% - 1.25em);
+					margin: 1.25em 0 0 1.25em;
+				}
+
+				.tiles article > a h2 {
+					margin: 0;
+					font-size: 0.9em;
+				}
+
+		}
+
+		@media screen and (max-width: 480px) {
+
+			.tiles {
+				margin: -1.25em 0 0 -1.25em;
+			}
+
+				.tiles article {
+					width: calc(33.33333% - 1.25em);
+					margin: 1.25em 0 0 1.25em;
+				}
+
+				.tiles article > a h2 {
+					margin: 0;
+					font-size: 0.7em;
+				}
+
+		}
+
+
+
+/*
 		@media screen and (max-width: 980px) {
 
 			.tiles {
