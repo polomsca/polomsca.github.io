@@ -1,22 +1,22 @@
 <div id="map2" style="display:">
     	<div class="embed-container">
-		<iframe width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0"
-		src="https://books.google.com/books?id=-AL43YC_cZsC&lpg=PP3&dq=kane%20new%20oxford&pg=PP3&output=embed">
+		<iframe width="50%" height="100%" frameborder="0" marginheight="0" marginwidth="0"
+		src="chineselit-actress.html">
 		</iframe>
 	</div>	
 </div>
-<div id="map1" style="display:;">
-        <div class="embed-container">
-	    <iframe width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0"
-	    src="exposition.html">
-	    </iframe>
-    </div>		
+<div id="map1" style="display:">
+    	<div class="embed-container">
+		<iframe width="50%" height="100%" frameborder="0" marginheight="0" marginwidth="0"
+		src="chineselit-snow.html">
+		</iframe>
+	</div>	
 </div>
 <style>
 .embed-container {
 	position: absolute; top:0; left:0; 
 	height: 100%; 
-	width: 100%;
+	width: 50%;
 } 
 .embed-container iframe, .embed-container object, .embed-container iframe{
 	position: absolute; top: 0; left: 0;
@@ -26,7 +26,7 @@
 </style>
 
 <script>
-var divs = [ "map1", "map2" ];
+var divs = [ "map1", "map2"];
 function toggle(layer) {
     var d
     for(var i = 0; i < divs.length; i += 1) {
@@ -108,9 +108,9 @@ function toggle(layer) {
 
 	<div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="javascript:toggle('map1')" ><i>View essay</i></a>
-  <a href="javascript:toggle('map2')" ><i>View "Kane"</i></a>
-  <a href="exposition-desktop.html"><i>View side-by-side (Desktop)</i></a>
+  <a href="javascript:toggle('map1')" ><i>View "Snow in Midsummer"</i></a>
+  <a href="javascript:toggle('map2')" ><i>View "An Actress Scorns Wealth and Honor to Preserve Her Chasity"</i></a>
+  <a href="chineselit-mobile.html"><i>View one at a time (Mobile)</i></a>
 </div>
 
 <script>
@@ -129,3 +129,20 @@ function closeNav() {
 
   <span style="font-size:3em;cursor:pointer;position:fixed; left:0.50em;top:0.50em;z-index=2"  onclick="openNav()">&#9881; </span>
 </div>
+
+<div class="stockIframe ">
+    <iframe src=chineselit.html height="99%" width="50%"></iframe> 
+</div>
+
+<style>
+   html,body { height: 100% }
+   .stockIframe iframe {   position:absolute; right:0px; top:0px}
+</style>
+
+<script>
+   function autoResize(i) {
+     var iframeHeight=
+     (i).contentWindow.document.body.scrollHeight;
+     (i).height=iframeHeight+20;
+   } 
+</script>
