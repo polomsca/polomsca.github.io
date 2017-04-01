@@ -1,134 +1,91 @@
-<head>
-	<title>Charlie's website</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
-	<style>
-		h1,h2 {
-			font-family: 'Homemade Apple', cursive;
-		}
-	</style>
-</head>
-<body>
-		<!-- Wrapper -->
-			<div id="wrapper">
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<header>
-								<br>
-								<h1>Charlie's website</h1>
-								<p>A rotating selection of past and ongoing projects. If you would like to chat about anything you find interesting, let me know at the bottom of the page.</p>
-							</header>
-							<section class="tiles">
-								<article class="style1">
-									<span class="image">
-										<img src="images/paget-league.jpg" alt="" />
-									</span>
-									<a href="class1/resume.html">
-										<h2>Resume</h2>
-										<div class="content">
-											
-										</div>
-									</a>
-								</article>
-								<article class="style2">
-									<span class="image">
-										<img src="images/staghunt-mosaic.jpg" alt="" />
-									</span>
-									<a href="class2/one-shot-games.html">
-										<h2>Machine learning in game theory</h2>
-										<div class="content">
-											
-										</div>
-									</a>
-								</article>
-								<article class="style3">
-									<span class="image">
-										<img src="images/luks-madison.jpg" alt="" />
-									</span>
-									<a href="class3/griffes-scherzo-iframe.html">
-										<h2>Griffes</h2>
-										<div class="content">
-											
-										</div>
-									</a>
-								</article>
-								<article class="style1">
-									<span class="image">
-										<img src="images/tenniel-juror.jpg" alt="" />
-									</span>
-									<a href="class1/science.html">
-										<h2>Posters</h2>
-										<div class="content">
-											
-										</div>
-									</a>
-								</article>
-								<article class="style2">
-									<span class="image">
-										<img src="images/dumas-count.jpg" alt="" />
-									</span>
-									<a href="class2/prisoners-dilemma.html">
-										<h2>Strategies in repeated games</h2>
-										<div class="content">
-											
-										</div>
-									</a>
-								</article>
-								<article class="style3">
-									<span class="image">
-										<img src="images/blechen-tiergarten.jpg" alt="" />
-									</span>
-									<a href="class3/brahms-capriccio-iframe.html">
-										<h2>Brahms</h2>
-										<div class="content">
-											
-										</div>
-									</a>
-								</article>
-								<article class="style1">
-									<span class="image">
-										<img src="images/unknown-doueryuan.jpg" alt="" />
-									</span>
-									<a href="class1/chineselit-desktop.html">
-										<h2>Writing</h2>
-										<div class="content">
-											
-										</div>
-									</a>
-								</article>
-								<article class="style2">
-									<span class="image">
-										<img src="images/rockwell-freedom.jpg" alt="" />
-									</span>
-									<a href="class2/food-safety.html">
-										<h2>Restaurant inspections</h2>
-										<div class="content">
-											
-										</div>
-									</a>
-								</article>
-								<article class="style3">
-									<span class="image">
-										<img src="images/whistler-nocturne.jpg" alt="" />
-									</span>
-									<a href="class3/debussy-toccata-iframe.html">
-										<h2>Debussy</h2>
-										<div class="content">
-											
-										</div>
-									</a>
-								</article>
+<html>
+	<head>
+		<title>Charlie's website</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+			<!-- Gigantic Heading -->
+				<section class="wrapper style2">
+					<div class="container">
+						<header class="major">
+							<h2>Charlie's website</h2>
+							<p>My ongoing projects. If you find something interesting, leave a message <a href="#leaveamessage">here</a>.</p>
+						</header>
+					</div>
+				</section>
+
+			<!-- Posts -->
+				<section class="wrapper style1">
+					<div class="container">
+						<div class="row">
+							<section class="6u 12u(narrower)">
+								<div class="box post">
+									<a href="resume.html" class="image left"><img src="images/paget-league.jpg" alt="" /></a>
+									<div class="inner">
+										<h3>Resume</h3>
+										<p>A one-page resume built in <a href="https://www.latex-project.org/">LaTeX</a> using several templates under <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons 3.0</a> (details upon request) and exported to HTML with <a href="https://github.com/coolwanglu/pdf2htmlEX">pdf2htmlEX</a>. Best viewed on a larger screen. </p>
+									</div>
+								</div>
+							</section>
+							<section class="6u 12u(narrower)">
+								<div class="box post">
+									<a href="posters.html" class="image left"><img src="images/tenniel-juror.jpg" alt="" /></a>
+									<div class="inner">
+										<h3>Posters</h3>
+										<p>A collection of conference abstracts and posters. Use the gear icon to toggle between documents without losing your reading position. Best viewed on a larger screen. </p>
+									</div>
+								</div>
+							</section>
+						</div>
+						<div class="row">
+							<section class="6u 12u(narrower)">
+								<div class="box post">
+									<a href="mlgames.html" class="image left"><img src="images/gibbs-steak.jpg" alt="" /></a>
+									<div class="inner">
+										<h3>Machine learning in game theory</h3>
+										<p>A database of two-player games and a convolutional neural network version of <a href="http://www.cs.ubc.ca/~jasonhar/GameNet-NIPS-2016.pdf">"GameNet"</a> that predicts the players' choices. You are welcome to play with the model as well as contribute to the database.</p>
+									</div>
+								</div>
+							</section>
+							<section class="6u 12u(narrower)">
+								<div class="box post">
+									<a href="pdmonth.html" class="image left"><img src="images/dumas-count.jpg" alt="" /></a>
+									<div class="inner">
+										<h3>Strategy in a month-long prisoner's dilemma</h3>
+										<p>A database of games from <a href="http://www.nature.com/articles/ncomms13800">a recent paper </a>that had players engaged in a month-long prisoner's dilemma. I show how to process the data and attempt a simple analysis of which strategies worked best.</p>
+									</div>
+								</div>
+							</section>
+							<section class="6u 12u(narrower)">
+								<div class="box post">
+									<a href="brahms-capriccio-iframe.html" class="image left"><img src="images/blechen-tiergarten.jpg" alt="" /></a>
+									<div class="inner">
+										<h3>Brahms</h3>
+										<p>A piano performance of Brahms Capriccio in G Minor from 7 Fantasien (Op. 116, No. 3). Start the audio with the <a href="http://www.html5tutorial.info/html5-audio.php">HTML5 audio player</a> and scroll down to follow the music score.</p>
+									</div>
+								</div>
+							</section>
+							<section class="6u 12u(narrower)">
+								<div class="box post">
+									<a href="griffes-scherzo-iframe.html" class="image left"><img src="images/luks-madison.jpg" alt="" /></a>
+									<div class="inner">
+										<h3>Griffes</h3>
+										<p>A piano performance of Griffes Scherzo from Fantasy Pieces (Op. 6, No. 3). Start the audio with the <a href="http://www.html5tutorial.info/html5-audio.php">HTML5 audio player</a> and scroll down to follow the music score.</p>
+									</div>
+								</div>
 							</section>
 						</div>
 					</div>
-				<!-- Footer -->
+				</section>
+
 					<footer id="footer">
+						<div class="container">
 						<div class="inner">
 							<section>
-								<h2>Leave a message</h2>
+								<h2 id="leaveamessage">Leave a message</h2>
 								<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLScbVyQuklE1Crj5QqLg6jgtcBKX0sfL87mSQx6jePixpQWkrQ/formResponse" target="hidden_iframe" onsubmit="submitted=true;">
 									<div class="field half first">
 										<input type="text" name="entry.1820125374" id="entry.1820125374" placeholder="Name" />
@@ -145,25 +102,29 @@
 								</form>
 								<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 							</section>
-							<ul class="copyright">
-								<li>&copy; Charlie Chen. Design modified from a site template found on <a href="http://html5up.net">HTML5 UP</a> under <a href="https://creativecommons.org/licenses/by/3.0/#">Creative Commons Attribution 3.0 Unported</a>.
-								<br>
-								</li>				
+
+					<!-- Copyright -->
+						<div class="copyright">
+							<ul class="menu">
+								<li>&copy; Charlie Chen 2017.</li>
+								<li>Design modified from <a href="http://html5up.net">HTML5 UP</a> under <a href="https://creativecommons.org/licenses/by/3.0/#">Creative Commons 3.0</a>.</li>
+								<li>Images, datasets, and music scores are in public domain. Details upon request.</li>
 							</ul>
 						</div>
-					</footer>
-			</div>
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/skel.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
 
-<script type="text/javascript">var submitted=false;</script>
-<script type="text/javascript">
-$('#gform').on('submit', function(e) {
-  $('#gform *').fadeOut(2000);
-  $('#gform').prepend('Thanks! I will try to be in touch soon.');
-  });
-</script>
-</body>
+				</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script type="text/javascript">var submitted=false;</script>
+			<script type="text/javascript">
+			$('#gform').on('submit', function(e) {
+				$('#gform *').fadeOut(2000);
+				$('#gform').prepend('Thanks! I will try to be in touch soon.');
+				});
+				</script>
+	</body>
+</html>
