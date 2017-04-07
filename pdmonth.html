@@ -11796,7 +11796,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>What sorts of strategies do players develop when they play around 20 <a href="https://en.wikipedia.org/wiki/Prisoner%27s_dilemma#The_iterated_prisoner.27s_dilemma">ten-round prisoner's dilemma games</a> a day over the course of a month? To start, in each round, this two-player game gives you and your opponent (opp) the choice to cooperate (C) or defect (D) to receive the following payoffs:</p>
+<p>What strategies do players develop when they play the <a href="https://en.wikipedia.org/wiki/Prisoner%27s_dilemma#The_iterated_prisoner.27s_dilemma">10-round prisoner's dilemma game</a> 20 times a day over the course of a month? First, let us imagine if you were one of the players. In each round, you and one other opponent (opp) can choose to cooperate (C) or defect (D) to receive the following payoffs:</p>
 <table>
   <tr>
     <th></th>
@@ -11813,7 +11813,7 @@ div#notebook {
     <td>you receive T</td>
     <td>you receive P</td>
   </tr>
-</table><p>But what does your opponent receive? In the standard prisoner's dilemma, the payoff matrix is symmetric:</p>
+</table><p>You should also pay attention to what your opponent receives:</p>
 <table>
   <tr>
     <th></th>
@@ -11830,9 +11830,7 @@ div#notebook {
     <td>opp receives S</td>
     <td>opp receives P</td>
   </tr>
-</table><p>But what are R, S, T, and P? For a game to be a prisoner's dilemma, the temptation (T) to defect while your opponent tries to cooperate must be larger than the reward (R) for both players cooperating, which must be larger than the punishment (P) for both players defecting, which must be larger than being suckered (S) into cooperating while your opponent defects. Also, the reward (R) must be larger than the average of being suckered (S) and tempted (T). Altogether, this looks like:</p>
-$$T>R>P>S$$<p>and $$R>\frac{S+T}{2}$$</p>
-<p>The paper we take our data from - <a href="http://www.nature.com/articles/ncomms13800">Mao et al. 2017</a> - uses the following RSTP values:</p>
+</table><p>You might wonder, what are R, S, T, and P? The paper we take our data from - <a href="http://www.nature.com/articles/ncomms13800">Mao et al. 2017</a> - uses the following RSTP values:</p>
 <table>
   <tr>
     <th></th>
@@ -11849,7 +11847,15 @@ $$T>R>P>S$$<p>and $$R>\frac{S+T}{2}$$</p>
     <td>you receive 7 points</td>
     <td>you receive 3 points</td>
   </tr>
-</table><p>But the stakes involve real money: for every 2 points a player receives in the game, he earns 1 cent afterwards.</p>
+</table><p>Points might seem abstract, but the stakes involve real money: for every 2 points a player receives in the game, he earns 1 cent afterwards. Notice that:</p>
+<ul>
+<li>There is a temptation <strong>T</strong> to defect while your opponent cooperates, as this gives a larger payoff for you than the reward <strong>R</strong> for both players cooperating. </li>
+<li>But the reward <strong>R</strong> for both players cooperating is larger than the punishment <strong>P</strong> for both players defecting, so there is also a motivation to cooperate. </li>
+<li>But cooperating while your opponent defects gives the least payoff overall, so there is a motivation to avoid being suckered <strong>S</strong>. </li>
+<li>In addition, in terms of balancing the payoffs, the reward <strong>R</strong> must be larger than the average of being suckered <strong>S</strong> and tempted <strong>T</strong>. </li>
+</ul>
+<p>Altogether, this looks like:</p>
+$$T>R>P>S$$<p>and $$R>\frac{S+T}{2}$$</p>
 
 </div>
 </div>
@@ -11868,7 +11874,7 @@ $$T>R>P>S$$<p>and $$R>\frac{S+T}{2}$$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>So what are the strategies that players develop to maximize their payoff? We can get some idea of what to expect by looking at Axelrod's famous tournaments described in <em>The Evolution of Cooperation</em>. In these tournaments, Axelrod invited game theorists to submit strategies to compete against one another. In the end, the successful strategies tried to:</p>
+<p>So what are the strategies that players develop to maximize their payoff? We can get some idea of what to expect by looking at Axelrod's tournaments. In these tournaments, Axelrod invited game theorists to submit strategies to compete against one another. In the end, the successful strategies tried to:</p>
 <ul>
 <li><p>Be nice: Cooperate first and do not defect before your opponent.</p>
 </li>
@@ -11879,7 +11885,7 @@ $$T>R>P>S$$<p>and $$R>\frac{S+T}{2}$$</p>
 <li><p>Do not be greedy: Do not try to score more than your immediate opponent, only try to maximize your own score over the whole tournament.</p>
 </li>
 </ul>
-<p>In the games we are about to look at, the players will not be familiar with these strategies. And unlike the pre-programmed strategies, they could become emotional:</p>
+<p>In the games we are about to look at, the players will not be familiar with these strategies. And unlike the pre-programmed strategies, they could become emotional and make different choices than the above:</p>
 <ul>
 <li><p>Be nice? No! I can cooperate at first, but I will also defect first to avoid being suckered.</p>
 </li>
@@ -11890,7 +11896,7 @@ $$T>R>P>S$$<p>and $$R>\frac{S+T}{2}$$</p>
 <li><p>Do not be greedy? No! I should always try to get the better of my opponent.</p>
 </li>
 </ul>
-<p>With this in mind, let us look at the games and see the strategies of successful players on the last day of play (Day 20). There are about 90 players playing about 20 ten-round games over the course of the day.</p>
+<p>With this in mind, let us look at the games and see the strategies of successful players on the last day of play (Day 20). There are about 90 players playing 20 ten-round games over the course of the day.</p>
 
 </div>
 </div>
@@ -11912,7 +11918,7 @@ $$T>R>P>S$$<p>and $$R>\frac{S+T}{2}$$</p>
 <p>First we need to:</p>
 <ul>
 <li>Remove incomplete games, namely games that do not have 20 actions (2 players acting over the course of 10 rounds)</li>
-<li>Divide the large dataset into each individual day</li>
+<li>Divide the large dataset into the individual days</li>
 </ul>
 
 </div>
