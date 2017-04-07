@@ -11778,7 +11778,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Model">Model<a class="anchor-link" href="#Model">&#182;</a></h1>
+<h1 id="Strategy-in-a-month-long-prisoner's-dilemma">Strategy in a month-long prisoner's dilemma<a class="anchor-link" href="#Strategy-in-a-month-long-prisoner's-dilemma">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -11796,7 +11796,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>What sorts of strategies do players develop when playing a 10-round game of Prisoner's Dilemma? In each round, this two-player game gives you and your opponent (opp) the choice to cooperate (C) or defect (D) to receive the following payoffs:</p>
+<p>What sorts of strategies do players develop when they play around 20 <a href="https://en.wikipedia.org/wiki/Prisoner%27s_dilemma#The_iterated_prisoner.27s_dilemma">ten-round prisoner's dilemma games</a> a day over the course of a month? To start, in each round, this two-player game gives you and your opponent (opp) the choice to cooperate (C) or defect (D) to receive the following payoffs:</p>
 <table>
   <tr>
     <th></th>
@@ -11813,7 +11813,7 @@ div#notebook {
     <td>you receive T</td>
     <td>you receive P</td>
   </tr>
-</table><p>But what does your opponent receive? In the standard Prisoner's Dilemma, the payoff matrix is symmetric:</p>
+</table><p>But what does your opponent receive? In the standard prisoner's dilemma, the payoff matrix is symmetric:</p>
 <table>
   <tr>
     <th></th>
@@ -11830,9 +11830,9 @@ div#notebook {
     <td>opp receives S</td>
     <td>opp receives P</td>
   </tr>
-</table><p>But what are R, S, T, and P? For a game to be a Prisoner's Dilemma, the temptation (T) to defect while your opponent tries to cooperate must be greater than the reward (R) for both players cooperating, which must be greater than the punishment (P) for both players defecting, which must be greater than being suckered (S) into cooperating while your opponent defects. Also, the reward (R) must be greater than the average of being suckered (S) and tempted (T):</p>
-$$T>R>P>S$$<p>and</p>
-$$R>\frac{S+T}{2}$$<p>In the games we are about to look at, Mao et al. (2017) use the following RSTP values:</p>
+</table><p>But what are R, S, T, and P? For a game to be a prisoner's dilemma, the temptation (T) to defect while your opponent tries to cooperate must be larger than the reward (R) for both players cooperating, which must be larger than the punishment (P) for both players defecting, which must be larger than being suckered (S) into cooperating while your opponent defects. Also, the reward (R) must be larger than the average of being suckered (S) and tempted (T). Altogether, this looks like:</p>
+$$T>R>P>S$$<p>and $$R>\frac{S+T}{2}$$</p>
+<p>The paper we take our data from - <a href="http://www.nature.com/articles/ncomms13800">Mao et al. 2017</a> - uses the following RSTP values:</p>
 <table>
   <tr>
     <th></th>
@@ -11850,29 +11850,6 @@ $$R>\frac{S+T}{2}$$<p>In the games we are about to look at, Mao et al. (2017) us
     <td>you receive 3 points</td>
   </tr>
 </table><p>But the stakes involve real money: for every 2 points a player receives in the game, he earns 1 cent afterwards.</p>
-<p>So what are the strategies that players develop to maximize their payoff? We can get some idea of what to expect from Axelrod's famous tournaments described in <em>The Evolution of Cooperation</em>. In these tournaments, Axelrod invited game theorists to submit strategies to compete against one another. In the end, the successful strategies tried to:</p>
-<ul>
-<li><p>Be nice: Cooperate first and do not defect before your opponent</p>
-</li>
-<li><p>But retaliate: Do not continue to cooperate if your opponent defects</p>
-</li>
-<li><p>But also forgive: Be open to cooperating again if your opponent does not continue to defect</p>
-</li>
-<li><p>And don't be greedy: Do not try to score more than your opponent, only try to maximize your own score over time.</p>
-</li>
-</ul>
-<p>In the games we are about to look at, the players are not game theorists and will not be familiar with these strategies. Furthermore, unlike the programmed strategies, they could become emotional and make bad choices:</p>
-<ul>
-<li><p>Be nice? It depends. I can cooperate at first, but I will defect on my own terms to avoid being suckered.</p>
-</li>
-<li><p>Retaliate? Of course! I should not lay down and let my opponent walk all over me.</p>
-</li>
-<li><p>Forgive? No! I should continue to retaliate to get extra points.</p>
-</li>
-<li><p>Don't be greedy? No! I should always try to get the better of my opponent.</p>
-</li>
-</ul>
-<p>With this in mind, let's look at the games. Let's see the strategies of successful players on the last day of play (Day 20). There are about 90 players playing about 20 games over the course of the day.</p>
 
 </div>
 </div>
@@ -11882,7 +11859,7 @@ $$R>\frac{S+T}{2}$$<p>In the games we are about to look at, Mao et al. (2017) us
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Dataset">Dataset<a class="anchor-link" href="#Dataset">&#182;</a></h2>
+<h2 id="Strategies">Strategies<a class="anchor-link" href="#Strategies">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -11891,7 +11868,53 @@ $$R>\frac{S+T}{2}$$<p>In the games we are about to look at, Mao et al. (2017) us
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Pre-processing-(rm-incomplete-games)">Pre-processing (rm incomplete games)<a class="anchor-link" href="#Pre-processing-(rm-incomplete-games)">&#182;</a></h3>
+<p>So what are the strategies that players develop to maximize their payoff? We can get some idea of what to expect by looking at Axelrod's famous tournaments described in <em>The Evolution of Cooperation</em>. In these tournaments, Axelrod invited game theorists to submit strategies to compete against one another. In the end, the successful strategies tried to:</p>
+<ul>
+<li><p>Be nice: Cooperate first and do not defect before your opponent.</p>
+</li>
+<li><p>Retaliate: Do not continue to cooperate if your opponent defects.</p>
+</li>
+<li><p>Forgive: Be open to cooperating again if your opponent does not continue to defect.</p>
+</li>
+<li><p>Do not be greedy: Do not try to score more than your immediate opponent, only try to maximize your own score over the whole tournament.</p>
+</li>
+</ul>
+<p>In the games we are about to look at, the players will not be familiar with these strategies. And unlike the pre-programmed strategies, they could become emotional:</p>
+<ul>
+<li><p>Be nice? No! I can cooperate at first, but I will also defect first to avoid being suckered.</p>
+</li>
+<li><p>Retaliate? Sure! I should not let my opponent walk all over me.</p>
+</li>
+<li><p>Forgive? No! I should continue to retaliate to get extra points.</p>
+</li>
+<li><p>Do not be greedy? No! I should always try to get the better of my opponent.</p>
+</li>
+</ul>
+<p>With this in mind, let us look at the games and see the strategies of successful players on the last day of play (Day 20). There are about 90 players playing about 20 ten-round games over the course of the day.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Pre-processing">Pre-processing<a class="anchor-link" href="#Pre-processing">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>First we need to:</p>
+<ul>
+<li>Remove incomplete games, namely games that do not have 20 actions (2 players acting over the course of 10 rounds)</li>
+<li>Divide the large dataset into each individual day</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -11961,7 +11984,7 @@ $$R>\frac{S+T}{2}$$<p>In the games we are about to look at, Mao et al. (2017) us
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>First, let's see the highest-scoring players and the proportion of RSTP they receive.</p>
+<p>To find what are the successful strategies, we need to find players with the highest payoffs at the end of the day and then look at how their actions have been categorized in RSTP terms.</p>
 
 </div>
 </div>

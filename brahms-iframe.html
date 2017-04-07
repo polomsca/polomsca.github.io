@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Brahms</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+<div class="stockIframe ">
+    <iframe src=brahms.html onload="autoResize(this)" height="100%" width="100%"></iframe> 
+</div>
+
+<style>
+   html,body { height: 100% }
+   .stockIframe iframe {   position:absolute; right:0px; top:0px} 
+</style>
+
+<script>
+   function autoResize(i) {
+     var iframeHeight=
+     (i).contentWindow.document.body.scrollHeight;
+     (i).height=iframeHeight+20;
+   } 
+</script>
+
+<audio controls>
+ <source src=brahms.mp3
+         type='audio/mp3'>
+         </audio>
+
+</body>
+</html>
